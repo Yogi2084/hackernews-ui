@@ -9,6 +9,7 @@ import NavigationBar from "./components/navigation-bar/NavigationBar";
 const MainContent = () => {
   return (
     <div className="bg-[#f6f6ef] text-black text-[13px] p-2 space-y-2 ">
+      sdkfksfkjb
       
       
     </div>

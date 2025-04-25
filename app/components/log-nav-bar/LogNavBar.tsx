@@ -4,6 +4,15 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { betterAuthClient } from "@/lib/integration/better-auth";
 
+
+const now = new Date(Date.now()); // create a Date object from timestamp
+  const today = now.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  });
+
+
 const LogNavBar = () => {
   const router = useRouter();
   const { data } = betterAuthClient.useSession();
@@ -23,7 +32,7 @@ const LogNavBar = () => {
             {user?.name?.charAt(0).toUpperCase() || "?"}
           </span>
           <span
-            onClick={() => router.push("#")}
+            onClick={() => router.push("/login")}
             className="font-bold ml-1 cursor-pointer"
           >
             Hacker News
@@ -37,7 +46,8 @@ const LogNavBar = () => {
             <button onClick={() => router.push("/ask")} className="hover:cursor-pointer">ask</button> |{" "}
             <button onClick={() => router.push("/show")} className="hover:cursor-pointer">show</button> |{" "}
             <button onClick={() => router.push("/jobs")} className="hover:cursor-pointer">jobs</button> |{" "}
-            <button onClick={() => router.push("/submit")} className="hover:cursor-pointer">submit</button>
+            <button onClick={() => router.push("/submit")} className="hover:cursor-pointer">submit</button> |{" "}
+            <span className="mx- text-white mx-5">{today}</span>
           </span>
         </div>
 
@@ -45,8 +55,10 @@ const LogNavBar = () => {
         <div className="flex items-center text-black text-sm">
           {user?.name && (
             <>
-              <span className="mr-1">{user.name} (1)</span>
+            <button onClick={() => router.push("blocks/user")} className="hover:cursor-pointer">
+              <span className="mr-1 hover:cursor-pointer">{user.name} (1)</span>
               <span className="mx-1">|</span>
+              </button> 
             </>
           )}
           <button onClick={handleSignOut} className="hover:underline cursor-pointer">

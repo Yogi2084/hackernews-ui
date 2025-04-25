@@ -4,9 +4,12 @@ import { useRouter } from "next/navigation";
 import React from "react";
 
 // Example user (you can pull this from context or session)
-const user = {
-  name: "Alice" // simulate a logged-in user
-};
+const now = new Date(Date.now()); // create a Date object from timestamp
+  const today = now.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  });
 
 const NavigationBar = () => {
   const router = useRouter();
@@ -32,13 +35,14 @@ const NavigationBar = () => {
             <button onClick={() => router.push("/ask")}className="hover: cursor-pointer">ask</button> |{" "}
             <button onClick={() => router.push("/show")}className="hover: cursor-pointer">show</button> |{" "}
             <button onClick={() => router.push("/jobs")}className="hover: cursor-pointer">jobs</button> |{" "}
-            <button onClick={() => router.push("/log")}className="hover: cursor-pointer">submit</button>
+            <button onClick={() => router.push("/log")}className="hover: cursor-pointer">submit</button> |{" "}
+            <span className="mx- text-white mx-5"> {  today}</span>
           </span>
         </div>
 
         {/* Right side */}
         <button
-          onClick={() => router.push("/log")}
+          onClick={() => router.push("/login")}
           className="hover:underline cursor-pointer"
         >
           login
