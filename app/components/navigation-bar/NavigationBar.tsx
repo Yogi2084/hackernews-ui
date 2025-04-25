@@ -17,7 +17,7 @@ const NavigationBar = () => {
         {/* Left side */}
         <div className="flex items-center gap-1">
           <span className="bg-orange-700 text-white font-bold px-1 hover:cursor-pointer "> 
-            {user?.name?.charAt(0).toUpperCase() || ""}
+            {"Y"}
           </span>
           <span
             onClick={() => router.push("/")}
@@ -32,7 +32,7 @@ const NavigationBar = () => {
             <button onClick={() => router.push("/ask")}className="hover: cursor-pointer">ask</button> |{" "}
             <button onClick={() => router.push("/show")}className="hover: cursor-pointer">show</button> |{" "}
             <button onClick={() => router.push("/jobs")}className="hover: cursor-pointer">jobs</button> |{" "}
-            <button onClick={() => router.push("/submit")}className="hover: cursor-pointer">submit</button>
+            <button onClick={() => router.push("/log")}className="hover: cursor-pointer">submit</button>
           </span>
         </div>
 

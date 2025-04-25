@@ -52,10 +52,6 @@ const LoginPage = () => {
     });
   };
 
-  const handleSignOut = async () => {
-    await betterAuthClient.signOut();
-  };
-
   return (
     <div className="p-4 font-sans text-sm mx-30">
       
