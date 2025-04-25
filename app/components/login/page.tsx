@@ -5,7 +5,7 @@
 
 import { betterAuthClient } from "@/lib/integration/better-auth";
 import React, { useState } from "react";// Update this path if needed
-import LogNavBar from "../components/log-nav-bar/LogNavBar";
+import LogNavBar from "../log-nav-bar/LogNavBar";
 
 const LoginPage = () => {
   const { data } = betterAuthClient.useSession();

@@ -35,14 +35,14 @@ const NavigationBar = () => {
             <button onClick={() => router.push("/ask")}className="hover: cursor-pointer">ask</button> |{" "}
             <button onClick={() => router.push("/show")}className="hover: cursor-pointer">show</button> |{" "}
             <button onClick={() => router.push("/jobs")}className="hover: cursor-pointer">jobs</button> |{" "}
-            <button onClick={() => router.push("/log")}className="hover: cursor-pointer">submit</button> |{" "}
+            <button onClick={() => router.push("/components/login")}className="hover: cursor-pointer">submit</button> |{" "}
             <span className="mx- text-white mx-5"> {  today}</span>
           </span>
         </div>
 
         {/* Right side */}
         <button
-          onClick={() => router.push("/login")}
+          onClick={() => router.push("/components/login")}
           className="hover:underline cursor-pointer"
         >
           login
