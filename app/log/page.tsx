@@ -2,7 +2,7 @@
 
 import { betterAuthClient } from "@/lib/integration/better-auth";
 import React, { useState } from "react";// Update this path if needed
-import NavigationBar from "../components/navigation-bar/NavigationBar";
+import LogNavBar from "../components/log-nav-bar/LogNavBar";
 
 const LoginPage = () => {
   const { data } = betterAuthClient.useSession();
@@ -59,13 +59,8 @@ const LoginPage = () => {
       <div className="flex justify-between items-center border-b pb-2 mb-6">
         {data?.user && (
           <>
-            <NavigationBar />
-            <button
-              onClick={handleSignOut}
-              className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-            >
-              Sign Out
-            </button>
+            <LogNavBar />
+          
           </>
         )}
       </div>
