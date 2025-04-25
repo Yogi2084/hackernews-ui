@@ -1,3 +1,6 @@
+//log
+//page.tsx
+
 "use client";
 
 import { betterAuthClient } from "@/lib/integration/better-auth";

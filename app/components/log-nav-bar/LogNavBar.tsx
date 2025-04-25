@@ -29,7 +29,9 @@ const LogNavBar = () => {
             Hacker News
           </span>
           <span className="ml-2">
-            <button onClick={() => router.push("/new")} className="hover:cursor-pointer">new</button> |{" "}
+          <button onClick={() => router.push("/welcome")} className="hover:cursor-pointer">welcome</button> |{" "}
+            
+            <button onClick={() => router.push("/")} className="hover:cursor-pointer">new</button> |{" "}
             <button onClick={() => router.push("/past")} className="hover:cursor-pointer">past</button> |{" "}
             <button onClick={() => router.push("/comments")} className="hover:cursor-pointer">comments</button> |{" "}
             <button onClick={() => router.push("/ask")} className="hover:cursor-pointer">ask</button> |{" "}
